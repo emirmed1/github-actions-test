@@ -6,9 +6,9 @@ on:
     types:
       - closed
       - reopened
-  schedule:
-    - cron: "*/5 * * * *"
-    - cron: "*/6 * * * *"
+  # schedule:
+  #   - cron: "*/5 * * * *"
+  #   - cron: "*/6 * * * *"
     
 jobs:
   run-github-actions:
