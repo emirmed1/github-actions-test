@@ -3,6 +3,7 @@ name: Actions Workflow
 on:
   # push:
   repository_dispatch:
+    types: [build]
   pull_request:
     types:
       - closed
