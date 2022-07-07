@@ -20,10 +20,11 @@ jobs:
           print(platform.processor())
         shell: python
 
-  # jobs run in parallel in not specified
+  # jobs run in parallel in not specified by "needs"
 
   run-windows-commands:
     runs-on: windows-latest
+    needs: ["run-shell-command"]
     steps:
       - name: Directory PowerShell
         run: Get-Location
