@@ -13,4 +13,4 @@ jobs:
           who-to-greet: 'Mona the Octocat'
       
       - name: Log Greeting Time
-        run: echo "${{ steps.greet.output.time }}"
+        run: echo "${{ steps.greet.outputs.time }}"
