@@ -1,13 +1,31 @@
 name: Actions Workflow
 
 on:
+  push:
+    branches:
+      - master
+      - 'feature/*' # matches everything that starts with feature/ (without additional /), like feature/featA, feature/featB, but not feature/feat/a
+      - 'feature/**' # matches everything that starts with feature/, including feature/featA, feature/featB, feature/feat/a
+      - '!feature/featC' # this will ignore branch feature/featC but we have to put it after * and **
+    tags:
+      - v1.*
+    paths:
+      - '**.js' # when there is a push to .js file it will trigger
+      - 'metadata/2-EOC/**' # if files are changed there then there will be push
+      - '!filename.js' # if we want to ignore that file
+  # pull_request:
+  #   branches:
+  #     - master
   # push:
-  repository_dispatch:
-    types: [build]
-  pull_request:
-    types:
-      - closed
-      - reopened
+  #  branches-ignore:
+  #    - main # This will not trigger workflow if it is pushed to main branch
+  # push:
+  # repository_dispatch:
+  #   types: [build]
+  # pull_request:
+  #   types:
+  #     - closed
+  #     - reopened
   # schedule:
   #   - cron: "*/5 * * * *"
   #   - cron: "*/6 * * * *"
