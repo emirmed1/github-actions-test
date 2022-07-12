@@ -13,12 +13,12 @@ jobs:
         node_version: [6, 8, 10]
         exclude: # it will not run this combination
           - os: ubuntu-latest
-            node-version: 6
+            node_version: 6
           - os: macos-latest
-            node-version: 6
+            node_version: 6
         include: #includes extra variables for certain configuration that already exist in matrix
           - os: ubuntu-latest
-            node-version: 6
+            node_version: 6
             is_ubuntu_8: 'true'        
       max-parallel: 2
 
