@@ -2,7 +2,7 @@ name: Matrix
 on:
   push:
     paths:
-      - '**\matrix.yml'
+      - '.github/workflows/matrix.yml'
   workflow_dispatch:
 
 jobs:
