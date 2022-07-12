@@ -2,7 +2,7 @@ name: Container
 on:
   push:
     paths:
-      - '.github/workflows/matrix.yml'
+      - '.github/workflows/container.yml'
   workflow_dispatch:
 
 jobs:
