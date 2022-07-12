@@ -8,10 +8,12 @@ on:
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
+    # timeout-minutes: 360 # after 6h github will cancel job, it can be set on job or step level
     steps:
       - name: echo a string
         run:  echo "Hello world"
-      
+        # continue-on-error: true # it will run all other steps even if this one fails
+
       - name: multiline script
         run: |
           node -v
