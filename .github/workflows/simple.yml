@@ -1,8 +1,11 @@
 name: Shell Commands
 
 on:
-  # push:
+  push:
+    paths:
+      - '.github/workflows/simple.yml'
   pull_request:
+  workflow_dispatch:
     
 
 jobs:
